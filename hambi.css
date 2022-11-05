@@ -1,35 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    height: 400vh;
+body {
     background-color: rgb(175, 175, 175);
 }
-nav{
-z-index: 100;
-width: 100vw;
-top: 0;
-left:0;
-position: fixed;
-background-color: rgba(0, 0, 0, 1);
-color: #fff;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-padding: 1.3rem 4rem;
-align-items: center;
+nav {
+    z-index: 100;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.3rem 4rem;
+    align-items: center;
 }
-.logo{}
-.toggleNavBtn{
+.toggleNavBtn {
     all: unset;
     position: relative;
     cursor: pointer;
     width: 30px;
     height: 30px;
 }
-.toggleNavBtn div{
+.toggleNavBtn div {
     background-color: #fff;
     width: 100%;
     height: 2px;
@@ -37,19 +35,19 @@ align-items: center;
     position: absolute;
     transition: 0.5s;
 }
-.toggleNavBtn :nth-child(1){
+.toggleNavBtn :nth-child(1) {
     top: 5px;
 }
-.toggleNavBtn :nth-child(2){
+.toggleNavBtn :nth-child(2) {
     top: 15px;
 }
-.toggleNavBtn :nth-child(3){
+.toggleNavBtn :nth-child(3) {
     top: 25px;
 }
-.nav{
+.nav {
     position: relative;
 }
-.offcanvas{
+.offcanvas {
     padding: 5rem 2rem;
     display: flex;
     flex-direction: column;
@@ -63,39 +61,39 @@ align-items: center;
     right: -40vw;
     transition: 0.5s;
 }
-ul{
+ul {
     list-style-type: none;
 }
-ul li{
+ul li {
     margin-top: 2rem;
     font-size: 2rem;
     color: #fff;
     position: relative;
     cursor: pointer;
 }
-.offcanvas-active{
+.offcanvas-active {
     transition: 0.5s;
     right: 0;
 }
-.navActive{
+.navActive {
     transition: 0.5s;
     transform: rotate(360deg);
 }
-.navActive :nth-child(1){
+.navActive :nth-child(1) {
     transition: 0.5s;
     top: 20px;
     transform: rotate(45deg);
 }
-.navActive :nth-child(2){
+.navActive :nth-child(2) {
     transition: 0.3s;
     opacity: 0;
 }
-.navActive :nth-child(3){
+.navActive :nth-child(3) {
     transition: 0.5s;
     top: 20px;
     transform: rotate(-45deg);
 }
-.offcanvas-active ul li::after{
+.offcanvas-active ul li::after {
     content: ' ';
     background-color: gold;
     position: absolute;
@@ -105,7 +103,7 @@ ul li{
     right: -10%;
     transition: 0.3s;
 }
-.offcanvas-active ul li::before{
+.offcanvas-active ul li::before {
     content: ' ';
     background-color: gold;
     position: absolute;
@@ -115,21 +113,21 @@ ul li{
     left: -10%;
     transition: 0.3s;
 }
-.offcanvas-active ul li:hover::after{
+.offcanvas-active ul li:hover::after {
     width: 60%;
     transition: 0.3s;
 }
-.offcanvas-active ul li:hover::before{
+.offcanvas-active ul li:hover::before {
     width: 60%;
     transition: 0.3s;
 }
-.articles{
+.articles {
     padding: 10rem 0;
     width: 100vw;
     display: flex;
     flex-direction: column;
 }
-.article-item{
+.article-item {
     position: relative;
     padding: 0;
     width: 25%;
@@ -140,11 +138,11 @@ ul li{
     background-color: transparent;
     box-shadow: 2px 2px 10px 4px rgb(36, 35, 35);
 }
-.article-item img{
+.article-item img {
     width: 100%;
     height: auto;
 }
-.article-item h4{
+.article-item h4 {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     padding: 0.5rem 2.5rem;
@@ -153,7 +151,7 @@ ul li{
     background-color: rgb(156, 156, 156);
     color: rgb(0, 0, 0);
 }
-.article-item p{
+.article-item p {
     padding: 1rem 2rem;
     width: 100%;
     height: 100%;
@@ -162,7 +160,7 @@ ul li{
     border-bottom-right-radius: 12px;
     color: #fff;
 }
-.article-item .icon{
+.article-item .icon {
     cursor: pointer;
     width: 25px;
     aspect-ratio: 1;
@@ -170,15 +168,110 @@ ul li{
     top: 10px;
     right: 10px;
 }
-.track{
+.track {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     padding: 0.4rem 1rem;
 }
-.track img{
+.track img {
     cursor: pointer;
     width: 20px;
     margin-left: 1rem;
     aspect-ratio: 1;
+}
+form {
+    width: 27vw;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    padding-bottom: 1.6rem;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+form h4 {
+    font-size: 1.4em;
+    padding-bottom: 1.3rem;
+    text-shadow: 1px 1px 10px #ffcc33;
+}
+input {
+    margin: 0.7rem 0;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid rgb(156, 156, 156);
+    width: 100%;
+    box-shadow: 1px 2px 5px 1px black;
+}
+form button {
+    all: unset;
+    transition: all 0.4s;
+    margin-bottom: 2rem;
+    width: 100%;
+    cursor: pointer;
+    background-color: #ffcc33;
+    padding: 0.6rem 0;
+    border-radius: 6px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-shadow: 1px 2px 5px 1px black;
+}
+p {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+p input {
+}
+a {
+    color: black;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+}
+button:hover {
+    transition: all 0.4s;
+    background-color: #ffcc33d3;
+}
+[type='checkbox'] {
+    outline: none;
+    border: none;
+    padding: 9px;
+    margin-right: 10px;
+    aspect-ratio: 1;
+    width: auto;
+    box-shadow: none;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none; /* Safari */
+}
+[type='checkbox']:before {
+    border: 1px solid black;
+    transition: all 0.4s;
+    border-radius: 8px;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 0;
+    left: 0;
+    content: ' ';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+}
+[type='checkbox']:checked::before {
+    content: '✓';
+    transition: all 0.4s;
+    background-color: #ffcc33;
 }
